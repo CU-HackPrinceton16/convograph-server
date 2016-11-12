@@ -6,10 +6,10 @@ def index():
     #JLC since we are using template inheritance we must render the child template
     return render_template('index.html')
 
-@app.route('/Projects')
+@app.route('/path1')
 def projects():
-    return render_template('projects.html')
+    return render_template('path1.html')
 
-@app.route('/Research')
+@app.route('/path2')
 def research():
-    return render_template('research.html')
+    return render_template('path2.html')
