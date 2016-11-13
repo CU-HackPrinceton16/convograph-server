@@ -10,7 +10,7 @@ body {
 imageavatar48 {
 			width: 48px;
 			height: 48px;
-			
+
 		}
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +40,7 @@ a:hover {
 /** HEADER */
 
 #header {
-	margin: 0em 0em 1em 0em; 
+	margin: 0em 0em 1em 0em;
 	padding: 0em 1em;
 	background-color: #CCCCCC;
 }
@@ -105,36 +105,3 @@ a:hover {
 ul li{
  font-size:15px;
 }
-
-
-/* transition
-a {
-    text-decoration: none;
-    position: relative;
-    color: #000000;
-    background-color: #FFFFFF
-
-}
-a:after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  border-bottom: 2px solid #000000;
-background-color: #000000;
-	color: #FFFFFF;
-  transition: 0.4s;
-
-}
-
-a:hover:after {
-    width: 100%;
-    
-}
-
-*/
-
-
-
-

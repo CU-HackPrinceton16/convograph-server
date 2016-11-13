@@ -1,19 +1,50 @@
 {% extends "head.html" %}
 {% block content %}
 
-        <h2>Ayylmao</h2>
-                <h2>&nbsp;</h2>
+<!--
+<h2>&nbsp;</h2>
 <p1>Lorem ipsum dolor sit amet, consectetur adipisci deadass deadass deadass #kanye2020<br><br></p1>
+-->
+<div class="container">
+    <div class="jumbotron text-center">
+        <h2>Ayylmao</h2>
+    </div>
 
+    <div class="row">
+        <div id="sound-submit" class="text-center">
+            sound-submit
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 
+    <div class="row">
+        <div id="transcript" class="col-sm-4 text-center">
+            transcript
+            {% block content %}{% endblock %}
+        </div>
+        <div id="linegraphs" class="col-sm-4 text-center">
+            linegraphs
+            {% block content %}{% endblock %}
+        </div>
+        <div id="speaker-list" class="col-sm-4 text-center">
+            speaker-list
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 
-                <p1>this is literally the best shit!<br><br> </p1>
-                <p1>paragraph<br><br></p1>
-                <p1>paragraph<br>
-                <ul1>
-                    <li><a href="https://drive.google.com/open?id=0B8giwrtqyuhIa2lrSklyUV9jMEk">Resume</a></li>
-                    <li><a href="https://github.com/JustinChavez">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/justinlchavez">LinkedIn</a></li>
-                    </ul1>
+    <div class="row">
+        <div id="graph" class="text-center">
+            graph
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="timeline" class="text-center">
+            timeline
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
