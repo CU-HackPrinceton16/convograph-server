@@ -4,4 +4,4 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 Bootstrap(app)
 
-import personalSite.views
+import convograph.views
