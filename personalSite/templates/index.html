@@ -1,48 +1,57 @@
 {% extends "head.html" %}
 {% block content %}
 
-<!--
-<h2>&nbsp;</h2>
-<p1>Lorem ipsum dolor sit amet, consectetur adipisci deadass deadass deadass #kanye2020<br><br></p1>
--->
+<script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
+<script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
+
 <div class="container">
     <div class="jumbotron text-center">
         <h2>Ayylmao</h2>
     </div>
 
     <div class="row">
-        <div id="sound-submit" class="text-center">
-            sound-submit
-            {% block content %}{% endblock %}
+        <div id="training-recording" style="padding: 5px;">
+            <label for="time-interval">Record a training sample (30s):</label>
+            <button id="start-recording">Start</button>
+            <script src="../static/training-recording.js"></script>
+        </div>
+    </div>
+    <div class="row">
+        <div id="convo-recording" style="padding: 5px;">
+            <label for="time-interval">Record a conversation (>20 min):</label>
+            <button id="start-recording">Start</button>
+            <button id="stop-recording">Stop</button>
+            <!--<button id="save-recording" disabled>Save</button>-->
+            <script src="../static/convo-recording.js"></script>
         </div>
     </div>
 
     <div class="row">
         <div id="transcript" class="col-sm-4 text-center">
             transcript
-            {% block content %}{% endblock %}
+
         </div>
         <div id="linegraphs" class="col-sm-4 text-center">
             linegraphs
-            {% block content %}{% endblock %}
+
         </div>
         <div id="speaker-list" class="col-sm-4 text-center">
             speaker-list
-            {% block content %}{% endblock %}
+
         </div>
     </div>
 
     <div class="row">
         <div id="graph" class="text-center">
             graph
-            {% block content %}{% endblock %}
+
         </div>
     </div>
 
     <div class="row">
         <div id="timeline" class="text-center">
             timeline
-            {% block content %}{% endblock %}
+
         </div>
     </div>
 </div>
