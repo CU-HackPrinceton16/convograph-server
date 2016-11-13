@@ -16,5 +16,6 @@ def path2():
 
 @app.route('/post', methods=['POST'])
 def post():
+    print("POST function fired!!")
     sample = request.form['sample']
     open('sample.wav', 'w').write(sample)

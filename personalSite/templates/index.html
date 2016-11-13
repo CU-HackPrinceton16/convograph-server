@@ -13,7 +13,7 @@
         <div id="training-recording" style="padding: 5px;">
             <label for="time-interval">Record a training sample (30s):</label>
             <button id="start-recording">Start</button>
-            <script src="../static/training-recording.js"></script>
+            <div id="status"></div>
         </div>
     </div>
     <div class="row">
@@ -21,10 +21,10 @@
             <label for="time-interval">Record a conversation (>20 min):</label>
             <button id="start-recording">Start</button>
             <button id="stop-recording">Stop</button>
-            <!--<button id="save-recording" disabled>Save</button>-->
-            <script src="../static/convo-recording.js"></script>
+            <div id="status"></div>
         </div>
     </div>
+    <script src="../static/recording.js"></script>
 
     <div class="row">
         <div id="transcript" class="col-sm-4 text-center">
