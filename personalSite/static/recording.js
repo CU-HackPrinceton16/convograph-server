@@ -5,18 +5,22 @@ var mediaConstraints = {
     audio: true
 };
 
+var counter = 0;
 var timeInterval;
+var recordingType;
 
 // TRAINING
 document.querySelector('#training-recording #start-recording').onclick = function() {
     //this.disabled = true;
     timeInterval = 3 * 1000;
+    recordingType = 'training';
     captureUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
 };
 // CONVO
 document.querySelector('#convo-recording #start-recording').onclick = function() {
     //this.disabled = true;
     timeInterval = 20 * 60 * 1000;
+    recordingType = 'convo';
     captureUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
 };
 document.querySelector('#convo-recording #stop-recording').onclick = function() {
@@ -29,6 +33,7 @@ document.querySelector('#convo-recording #stop-recording').onclick = function() 
 var mediaRecorder;
 
 function onMediaSuccess(stream) {
+    counter += 1;
     mediaRecorder = new MediaStreamRecorder(stream);
     mediaRecorder.stream = stream;
 
@@ -42,7 +47,9 @@ function onMediaSuccess(stream) {
         //mediaRecorder.save();
         // post it!
         var fd = new FormData();
-        fd.append('fname', 'test.wav');
+        var filename = (recordingType == 'training') ? ('sample' + counter + '.wav') : ('convo.wav')
+        fd.append('filename', filename);
+        fd.append('type', recordingType);
         fd.append('data', blob);
         $.ajax({
             type: 'POST',

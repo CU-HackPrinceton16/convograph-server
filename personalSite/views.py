@@ -1,5 +1,6 @@
 from personalSite import app
 from flask import render_template
+from flask import request
 
 @app.route('/')
 def index():
@@ -16,6 +17,7 @@ def path2():
 
 @app.route('/post', methods=['POST'])
 def post():
-    print("POST function fired!!")
-    sample = request.form['sample']
-    open('sample.wav', 'w').write(sample)
+    print("type received: " + request.form['type'])
+    sample = request.data
+    open(request.form['filename'], 'wb+').write(sample)
+    return 'OK'
